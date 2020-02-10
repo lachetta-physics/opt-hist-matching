@@ -31,7 +31,7 @@ import org.apache.commons.math3.fitting.WeightedObservedPoints;
  * @author m.lachetta
  */
 public class HistMatcher implements PlugIn {
-    static final int NBINS = 256;
+    static int NBINS = 128;
     @Override
     public void run(String arg) {
         ImagePlus ip = ij.WindowManager.getCurrentImage();
