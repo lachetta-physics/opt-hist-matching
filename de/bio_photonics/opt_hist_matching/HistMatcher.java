@@ -80,7 +80,7 @@ public class HistMatcher implements PlugIn {
             if (upperBin <= NBINS) {
                 int upperHeight = histogram[upperBin];
                 int lowerHeight = histogram[lowerBin];
-                while (lowerHeight >= upperHeight && upperBin < NBINS) {
+                while (lowerHeight >= upperHeight && upperBin < NBINS-1) {
                     upperBin++;
                     lowerBin++;
                     upperHeight = histogram[upperBin];
@@ -123,7 +123,7 @@ public class HistMatcher implements PlugIn {
     public static void main( String [] args ) {
 	HistMatcher a  = new HistMatcher();
         ImageJ imageJ = new ij.ImageJ( ij.ImageJ.EMBEDDED);
-        ImagePlus ip = new ImagePlus("G:\\downloads\\Stack Reconstruction_binned.tif");
+        ImagePlus ip = new ImagePlus("D:\\OPT-images\\wt-hirn-red\\binnedx4-Stack Reconstruction.tif");
         ip.show();
 	a.run("");
     }
